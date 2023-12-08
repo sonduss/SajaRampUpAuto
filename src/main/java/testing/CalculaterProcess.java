@@ -12,6 +12,7 @@ public class CalculaterProcess {
         System.out.println("Started testing the great calculator app");
     }
 
+
     @Test
     public void validateAddProcess() {
         Calculater_.AddProcess(4, 6);
