@@ -15,6 +15,7 @@ public class Calculater {
         return x * y;
     }
 
+    
     public float DivideProcess(float x, float y) {
         return (x / y);
     }

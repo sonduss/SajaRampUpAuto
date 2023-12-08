@@ -6,7 +6,6 @@ import org.testng.annotations.*;
 @Test
 public class CalculaterProcess {
     Calculater Calculater_;
-
     @BeforeTest
     public void SetUp() {
         Calculater_ = new Calculater();
