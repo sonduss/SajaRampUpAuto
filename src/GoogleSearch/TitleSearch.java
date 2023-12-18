@@ -8,7 +8,7 @@ public class TitleSearch {
        String pageTitle = Driver.getTitle();
        String expectedTitle = "Selenium Tutorials";
        Assert.assertEquals("Selenium Tutorials", expectedTitle, pageTitle);
-       //System.out.println(" Validation Title done");
+
    }
 
    }
