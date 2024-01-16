@@ -36,23 +36,32 @@ public class TCs_GitHubLoginProcess {
 
     ;
 
-
     @BeforeMethod
-    @Parameters("browser")
-    public void setup(String browser) {
-        if (browser.equalsIgnoreCase("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "/Users/sajasalahat/Desktop/chromedriver-mac-x64");
-            Driver = new ChromeDriver();
-            Driver.get("https://github.com/login");
-        } else if (browser.equalsIgnoreCase("edge")) {
-            System.setProperty("webdriver.edge.driver", "/Users/sajasalahat/Desktop/msedgedriver 3");
-            Driver = new EdgeDriver();
-            Driver.get("https://github.com/login");
-
-        } else
-            throw new IllegalArgumentException("Invalid");
-
+    public void setup() {
+        System.setProperty("webdriver.chrome.driver", "/Users/sajasalahat/Desktop/chromedriver-mac-x64");
+           Driver = new ChromeDriver();
+           Driver.get("https://github.com/login");
+//
     }
+
+
+//
+//    @BeforeMethod
+//    @Parameters("browser")
+//    public void setup(String browser) {
+//        if (browser.equalsIgnoreCase("chrome")) {
+//            System.setProperty("webdriver.chrome.driver", "/Users/sajasalahat/Desktop/chromedriver-mac-x64");
+//            Driver = new ChromeDriver();
+//            Driver.get("https://github.com/login");
+//        } else if (browser.equalsIgnoreCase("edge")) {
+//            System.setProperty("webdriver.edge.driver", "/Users/sajasalahat/Desktop/msedgedriver 3");
+//            Driver = new EdgeDriver();
+//            Driver.get("https://github.com/login");
+//
+//        } else
+//            throw new IllegalArgumentException("Invalid");
+//
+//    }
 
     @Test(dataProvider = "Test", priority = 1)
     public void validSignInProcess(String Email, String Password) {
